@@ -1,5 +1,5 @@
 library(vegan)
-#NMDS¹Lµ{
+#NMDSè™•ç†
 set.seed(19990708)
 fishmds <- metaMDS(sqrt(secndnmdspreUN[,-1]), distance = "bray")
 plot(fishmds, type = "n")
@@ -11,8 +11,9 @@ legend("bottomright",legend = c(secndnmdspreUN[,1]),pch=c(1:6),cex = 1,col = c(1
        bty = "n")
 points(fishmds, pch = c(1:6),col=(1:6))
 
-#UMAP ¹Lµ{
-#UN = ³n°©³½Ãşdata
+#UMAP è™•ç†
+#UN = è»Ÿéª¨é­šé¡
+#secndnmdspreUN = å…¨é«”é­šé¡
 bray2.distance <- vegdist(sqrt(UN[,-1]), method = 'bray' )
 distbray2 <- as.matrix(bray2.distance)
 distbray2
